@@ -1,24 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="task3_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KF-hU-2zq">
+                                <rect key="frame" x="0.0" y="212" width="393" height="160"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7JS-H2-zPd">
+                                <rect key="frame" x="112" y="530" width="169" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Set/reset"/>
+                                <connections>
+                                    <action selector="setResetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Au-Tm-hMV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qix-QJ-nNq">
+                                <rect key="frame" x="75" y="225" width="242" height="147"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="147" id="PPb-TC-oNh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7B-uh-NXm">
+                                <rect key="frame" x="120" y="469" width="153" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Play/pause"/>
+                                <connections>
+                                    <action selector="playPauseTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Uti-H9-B8E"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qix-QJ-nNq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0Wy-Hf-GCd"/>
+                            <constraint firstItem="qix-QJ-nNq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="DdZ-vZ-cwT"/>
+                            <constraint firstItem="7JS-H2-zPd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="112" id="RoD-4V-LHk"/>
+                            <constraint firstItem="q7B-uh-NXm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="120" id="WKM-A9-Rgc"/>
+                            <constraint firstItem="qix-QJ-nNq" firstAttribute="bottom" secondItem="1KF-hU-2zq" secondAttribute="bottom" id="dfA-uW-vi3"/>
+                            <constraint firstItem="qix-QJ-nNq" firstAttribute="centerX" secondItem="7JS-H2-zPd" secondAttribute="centerX" id="dgR-Ss-Kii"/>
+                            <constraint firstItem="qix-QJ-nNq" firstAttribute="centerX" secondItem="1KF-hU-2zq" secondAttribute="centerX" id="nog-wh-BUC"/>
+                            <constraint firstItem="q7B-uh-NXm" firstAttribute="top" secondItem="qix-QJ-nNq" secondAttribute="bottom" constant="97" id="oPN-tA-08H"/>
+                            <constraint firstItem="q7B-uh-NXm" firstAttribute="centerX" secondItem="7JS-H2-zPd" secondAttribute="centerX" id="qEl-RF-Gud"/>
+                            <constraint firstItem="qix-QJ-nNq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="166" id="wwB-c0-jzz"/>
+                            <constraint firstItem="7JS-H2-zPd" firstAttribute="top" secondItem="q7B-uh-NXm" secondAttribute="bottom" constant="26" id="zc2-2V-iAS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playPauseButton" destination="q7B-uh-NXm" id="Vke-Kl-r0g"/>
+                        <outlet property="setResetButton" destination="7JS-H2-zPd" id="Kjg-em-NzX"/>
+                        <outlet property="timePicker" destination="1KF-hU-2zq" id="2bF-Ia-WOo"/>
+                        <outlet property="timerLabel" destination="qix-QJ-nNq" id="QBO-8D-oj3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="87.786259541984734" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

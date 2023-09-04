@@ -17,6 +17,7 @@
 		62D958E92A9DE5A200C5F72E /* task3_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D958E82A9DE5A200C5F72E /* task3_appTests.swift */; };
 		62D958F32A9DE5A200C5F72E /* task3_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D958F22A9DE5A200C5F72E /* task3_appUITests.swift */; };
 		62D958F52A9DE5A200C5F72E /* task3_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D958F42A9DE5A200C5F72E /* task3_appUITestsLaunchTests.swift */; };
+		62D959022A9DE7EF00C5F72E /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 62D959012A9DE7EE00C5F72E /* alarm.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		62D958EE2A9DE5A200C5F72E /* task3_appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = task3_appUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62D958F22A9DE5A200C5F72E /* task3_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task3_appUITests.swift; sourceTree = "<group>"; };
 		62D958F42A9DE5A200C5F72E /* task3_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = task3_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		62D959012A9DE7EE00C5F72E /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		62D958CD2A9DE59F00C5F72E /* task3_app */ = {
 			isa = PBXGroup;
 			children = (
+				62D959012A9DE7EE00C5F72E /* alarm.mp3 */,
 				62D958CE2A9DE59F00C5F72E /* AppDelegate.swift */,
 				62D958D02A9DE59F00C5F72E /* SceneDelegate.swift */,
 				62D958D22A9DE59F00C5F72E /* ViewController.swift */,
@@ -234,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62D959022A9DE7EF00C5F72E /* alarm.mp3 in Resources */,
 				62D958DE2A9DE5A200C5F72E /* LaunchScreen.storyboard in Resources */,
 				62D958DB2A9DE5A200C5F72E /* Assets.xcassets in Resources */,
 				62D958D62A9DE59F00C5F72E /* Main.storyboard in Resources */,
