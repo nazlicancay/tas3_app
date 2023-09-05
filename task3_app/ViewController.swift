@@ -47,35 +47,29 @@ class ViewController: UIViewController {
     }
     
     @IBAction func playPauseTapped(_ sender: UIButton) {
-          
         if timer == nil {
-            
-            timeLeft = timePicker.countDownDuration
+            // if timer is not already running
+            if timeLeft == 0 {
+                timeLeft = timePicker.countDownDuration
+            }
             
             if timeLeft > 0 {
                 timePicker.isHidden = true
-                
-                // Update the timerLabel immediately before setting it to visible
                 updateLabelTime(timeLeft)
                 timerLabel.isHidden = false
-                
                 playPauseButton.setTitle("Pause", for: .normal)
                 timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
                 scheduleNotification()
             }
-            
         } else {
-            
+            // If timer is already running, then pause it
             timer?.invalidate()
             timer = nil
-            timePicker.isHidden = false
-            timerLabel.isHidden = true
-            
             playPauseButton.setTitle("Play", for: .normal)
-            
             UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["timerElapsed"])
         }
     }
+
 
     func updateLabelTime(_ time: TimeInterval) {
         let minutes = Int(time) / 60
